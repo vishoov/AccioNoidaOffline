@@ -1,0 +1,118 @@
+Javascript Introduction
+
+is a programming language for the web
+writing DSA, interacting with HTML and css
+
+HTML, CSS, Javascript
+Higly Typed Language 
+Interpretor based 
+Object Based 
+
+
+HTML -> structure 
+CSS -> styling 
+JS -> functionality 
+
+
+Javascript Values 
+
+variable
+fixed 
+
+
+Javascript Literals 
+
+1. Numbers -> 10 or 10.10
+2. Strings -> "10" or "string" or 'string or `hello`
+
+
+JS Variables 
+
+let, var, const 
+
+let a;
+
+
+initialisation -> reserves a space for that variabkle in the memory space  
+declaration  -> a=10 -> value declared 
+
+JS Operators  
+
++, -, *, %, / , =, +=, -= 
+
+Expresssions 
+
+let product = (5*10)
+
+Javascript Keywords 
+
+let d= 1
+var
+const
+this
+new
+
+JS Comments
+
+readability, clarity
+
+JS Identifiers / Names 
+
+let a=10
+let count = 0
+function calculatePrice(){
+
+}
+
+
+
+
+JS names should always start with ->
+1. alphabet -> let count, let weather, temperature let 123=10
+2. $ 
+3. _ 
+
+
+Js is Case sensitive 
+
+
+let firstname, let firstName 
+
+
+JS and Camel Case 
+
+let firstname, let FirstName 
+
+let first_name 
+
+
+
+
+Javascript Variables 
+
+
+1. Automatically    x=1; y=5 
+2. let
+3. var
+4. const 
+
+
+Rules
+
+1. always decalre Variables
+2. let, var -> mutable 
+3. const should only be used when you want to prevent changing of the value 
+
+const interest = function calculate_interest(principal, rate)
+
+4. var is preferred for older browsers 
+
+let name, var name, const name
+
+
+let name, age, phone 
+
+
+CONSOLE.LOG
+
+console.log(data);
