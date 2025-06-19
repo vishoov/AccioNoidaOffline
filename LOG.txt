@@ -116,3 +116,7 @@ let name, age, phone
 CONSOLE.LOG
 
 console.log(data);
+
+
+SCOPE
+
