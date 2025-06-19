@@ -119,7 +119,7 @@ function checkDay(day){
 }
 
 // checkDay("Friday")
-let day = "Saturday";
+let day = "wednesday";
 function checkDaySwitch(day){
     switch(day){
         case "Monday":
@@ -244,3 +244,18 @@ else{
     }))
 
     // console.log(output); // You can watch the movie
+
+
+    function checknumber(num){
+        switch(num){
+            case num>0:
+                console.log(num + " is positive");
+                break;
+            case num<0:
+                console.log(num + " is negative");
+                break;
+            case num ==0:
+                console.log(num + " is neither positive nor negative");
+                break;
+        }
+    }
