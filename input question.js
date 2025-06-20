@@ -1,0 +1,1 @@
+let input = prompt("Please enter a value (number, string or true/false");
