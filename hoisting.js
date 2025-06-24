@@ -41,9 +41,9 @@
 //if you try to access var before initialise it returns undefined value 
 
 
-// console.log(num)
-// const num = 10
-// console.log(num)
+console.log(num)
+let num = 10
+console.log(num)
 
 
 //TEMPORAL DEAD ZONE 
@@ -53,11 +53,21 @@
 // const sayHi = function(){
 //     console.log("Hello there")
 // }
-console.log(hello); var hello="hey"
+console.log(hello); 
+
+var hello;
+hello="this is the value"
 
 if(true){
     console.log(hello)
 }
+
+//keyword name 
+//let number 
+//function calculatesum
+//+, -, / 
+//let, const, var 
+
 
 //explain me the difference in hoisting behaviour of different variables 
 // variable         var         let         const

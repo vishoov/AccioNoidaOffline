@@ -120,3 +120,14 @@ console.log(data);
 
 SCOPE
 
+
+
+
+= -> assignment operator 
+let input = 10
+
+== -> comparison operator 
+it just compares the values 
+
+=== -> type check 
+
