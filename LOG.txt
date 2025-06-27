@@ -4,9 +4,24 @@ is a programming language for the web
 writing DSA, interacting with HTML and css
 
 HTML, CSS, Javascript
+
+
+v8 Engine 
+
+
 Higly Typed Language 
 Interpretor based 
 Object Based 
+
+
+
+let user = {
+    key:value
+    name:"john",
+    email:"john@john.com",
+    age:20
+}
+
 
 
 HTML -> structure 
@@ -20,10 +35,24 @@ variable
 fixed 
 
 
+
+"Accio"
+
+let i=10
+i++
+
 Javascript Literals 
 
 1. Numbers -> 10 or 10.10
 2. Strings -> "10" or "string" or 'string or `hello`
+2. arrays
+4. Boolean - true or false
+
+10 -> number
+"ten" -> string
+[1, 2, 3, 45] -> array
+{key:value} -> object
+
 
 
 JS Variables 
@@ -33,12 +62,15 @@ let, var, const
 let a;
 
 
-initialisation -> reserves a space for that variabkle in the memory space  
-declaration  -> a=10 -> value declared 
+declaration -> reserves a space for that variabkle in the memory space  
+initialisation  -> a=10 -> value declared 
 
 JS Operators  
 
-+, -, *, %, / , =, +=, -= 
++, -, *, %, / , =
+
+
+
 
 Expresssions 
 

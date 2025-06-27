@@ -1,4 +1,24 @@
 // Conditional Statement
+//Truthy -> true, 10, "string"
+//Falsy -> undefined, null, {}, [], "", false, NaN
+
+
+
+const value = (10==="10")
+
+if(value){
+    console.log("the value is true")
+}
+else{
+    console.log("the value is false")
+}
+
+
+
+
+
+
+
 
 //if a number is odd 
 //let num = 7;

@@ -12,8 +12,8 @@
 // console.log(7)
 
 
-// for(let i=10; i<=10; ++i){
-//     console.log(i);
+// for(let i=0; i<=10; ++i){
+// console.log(i**2)
 // }
 
 
@@ -62,12 +62,12 @@ let arr = [1, 3, 5, 3, 6, 36, 3,6, 3, 5, 3, 3, 6];
 // arr[i]
 //arr.length or arr.size
 
-// for(let i=0 ; i<arr.length; i++){
-//     let value = arr[i];
-//     if(value===36){
-//         console.log(i)
-//     }
-// }
+for(let i=0 ; i<arr.length; i++){
+    let value = arr[i];
+    if(value===36){
+        console.log(i)
+    }
+}
 
 
 // arr=[2, 4, 6, 3, 5, 7, 11, 22, 33, 44, 55];
