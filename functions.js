@@ -63,7 +63,13 @@ for(let i=0; i<arr1.length; i++){
     greet(arr1[i])
 }
 
-const object = {
+
+
+
+
+
+
+const user1 = {
     name:"Accio",
     address:"Delhi"
 }
@@ -82,7 +88,7 @@ function greet(object){
 
 // console.log(address)
 // const value = greet(object)
-greet(object)
+greet(user1)
 
 //Here we called the function before its declaration and it did not give any error
 //this is because the functions are HOISTED!!!
@@ -94,7 +100,9 @@ greet(object)
 
 // 2 function expression
 
-
+// function name(argument){
+//     logic
+// }
 //anonymous function expression
 const greeet = function(){
     console.log("Hello World")   
@@ -138,13 +146,15 @@ console.log(fruits.map((fruit)=>fruit.length))
 
 // Function Parameters/Arguments
 
+// const greet = "Namaste"
+
+const funnc = function hello(name, greet="Namaste"){
+    console.log(greet,name)
+}
 
 
-// const funnc = function hello(name, greet="Namaste"){
-//     console.log(greet,name)
-// }
 
-// hello("Accio")
+funnc("Accio")
 
 //rest parameters
 // Rest parameters allow functions to accept indefinite number of arguments as an array
@@ -160,7 +170,7 @@ function sum(...numbers){
 
 
 
-console.log(sum(1, 2, 3, 45, 5, 6))
+console.log(sum(1, 2, 3, 4, 5, 6))
 console.log(sum(1, 2, 3,4, 2, 4, 2, 3, 2, 4, 2, 4))
 
 
@@ -173,16 +183,16 @@ console.log(sum(1, 2, 3,4, 2, 4, 2, 3, 2, 4, 2, 4))
 //     };
 // }
 
-// function calculatePower(fn, number) {
-//     return fn(number);
-// }
+function calculatePower(fn, number) {
+    return fn(number);
+}
 
-// // Example usage:
-// const square = power(2);        // returns a function: x => x ** 2
-// const cube = power(3);          // returns a function: x => x ** 3
+// Example usage:
+const square = power(2);        // returns a function: x => x ** 2
+const cube = power(3);          // returns a function: x => x ** 3
 
-// console.log(calculatePower(square, 5)); // 25
-// console.log(calculatePower(cube, 2));   // 8
+console.log(calculatePower(square, 5)); // 25
+console.log(calculatePower(cube, 2));   // 8
 
 
 // function greet(name) {
@@ -207,18 +217,18 @@ console.log(sum(1, 2, 3,4, 2, 4, 2, 3, 2, 4, 2, 4))
 
 
 function outerFunction(x){
+  //x active
     
-
     function innerFunction(y){
-        let sum = x+y
-        return sum
+        //y
+        return x+y
     }
     return innerFunction;
 }
 
 const addFive = outerFunction(5);
-console.log(outerFunction(5)(3))
-
+console.log("output", addFive(3))
+// (3) => 5 + 3 = 8
 
 //what is the difference between function declaration and function expression
 
@@ -243,3 +253,10 @@ let num = 0;
 const counter = createCounter()
 console.log(counter()) //1
 console.log(counter()) //2
+
+
+
+//hello
+//hey
+//how are you
+//fine 
