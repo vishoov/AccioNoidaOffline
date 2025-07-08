@@ -120,6 +120,15 @@ let arr2= [1, 2, 3, 1, 1, 2, 3, 1];
 
 console.log(arr2.indexOf(1));
 
+function includes(arr, element){
+    //indexOf
+    if(arr.indexOf(element) !== -1) {
+        return true;
+    }
+    return false;
+}
+
+
 
 //join -> joins the elements of the array into a string
 console.log(arr2.join(" ")); // "1 2 3 1 1 2 3 1"
@@ -227,4 +236,155 @@ const sum = nos.reduce(callback, 0)
 //syntax -> array.reduce(callback, initialValue)
 console.log("Sum", sum); // 55
 
+let users = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 30 },
+    { name: "Charlie", age: 35 }
+]
 
+//find out the average age of users
+
+// user.age
+
+//1. i find out the sum of all ages
+//2. divide the sum by the number of users
+
+const calc = (avg, user)=>avg + user.age
+
+let avgAge = users.reduce(calc, 0)/ users.length
+console.log(avgAge)
+
+
+// const doubled = numbers.map(function(num){
+//     console.log( num * 2);
+// // });
+
+
+// const callback = function(accumulator, num){
+//     return accumulator + num;
+// }
+
+// const sum = nos.reduce(callback, 0)
+
+
+
+let numb= [100, 5, 50, 30, 53, 44, 3, 2, 4, 3]
+//identify numbers that are greater than 10
+// and return the sum of those numbers
+
+
+//return the sum of numbers greater than 10
+
+// let greaterThan10 = numb.map(num=>num>10?num:0)
+
+// console.log("Greater than 10", greaterThan10)
+
+// const sumsss = greaterThan10.reduce((acc, num)=>acc+num, 0)
+
+// console.log("Sum of numbers greater than 10", sumsss) // 237
+
+
+const sumGreaterThan10 = numb.filter(function(num){
+    
+    if(num > 10) {
+        console.log("Greater than 10", num);
+        return num; //keep the element
+    }
+    
+}).reduce((acc, num) => acc + num, 0);
+
+console.log("Sum of numbers greater than 10", sumGreaterThan10); // 237
+
+
+const events = [
+    { name: "A", date: "2023-01-01" },
+    { name: "B", date: "2024-05-10" },
+    { name: "C", date: "2022-12-31" }
+  ];
+
+
+const nearest = mostrecent(events)
+
+function mostrecent(events) {
+    return events.reduce((latest, event)=>{
+const currentDate = new Date(event.date);
+const earliestDate = new Date(latest.date);
+if(currentDate < earliestDate) {
+    return event;
+}
+return latest;
+    }, events[0])
+}
+
+console.log("Most Recent Event", nearest); // { name: "B", date: "2024-05-10" }
+
+
+
+let arr3= [1, 2, 6, 3, 4, 5, 7, 8, 9, 10];
+
+// const evens = arr3.map(function(num){
+//     if(num % 2 === 0) {
+//         return num; //keep the element
+//     }
+//     // return null; //remove the element
+// }).filter(num=>num!==null)
+
+// console.log("Evens", evens); // [null, 2, null, 4, null, 6, null, 8, null, 10]
+
+const oods = arr3.filter(function(num){
+    if(num % 2 !== 0) {
+        return num; //keep the element
+    }
+    // return null; //remove the element
+})
+
+console.log("Odds", oods); // [1, 3, 5, 7, 9]
+
+
+//reduce 
+
+function partitionOddEven(arr){
+    return arr.reduce((acc, num)=>{
+        if(num%2==0){
+            acc[0].push(num); //even numbers
+        }else{
+            acc[1].push(num); //odd numbers
+        }
+        return acc;
+    }, [[],[]])
+}
+
+console.log("Partition Odd Even", partitionOddEven(arr3)); 
+
+
+//arr.map()
+//when to use map?
+//map is used when we want to transform each element of the array into a new value
+//for example, if we want to double each element of the array, we can use map
+//arr.map(num => num * 2)
+//the size of input and output arrays are the same
+//map output-> array of fixed size
+
+//arr.filter()
+//when to use filter?
+//filter is used when we want to remove some elements from the array based on a condition
+//for example, if we want to remove all even numbers from the array, we can use filter
+//filter output -> array of variable size
+
+//arr.reduce()
+//when to use reduce?
+//reduce is used when we want to reduce the array to a single value
+//for example, if we want to find the sum of all elements in the array, we can use reduce
+//reduce output -> single value
+
+//arr.find() -> returns the first element in the array that satisfies the provided testing function
+
+
+console.log(arr3.find(num => num > 5)); // 6
+
+//arr.findIndex() -> returns the index of the first element in the array that satisfies the provided testing function
+console.log(arr3.findIndex(num => num > 5));
+
+//arr.some() -> tests whether at least one element in the array passes the test implemented by the provided function
+
+console.log(arr3.some(num => num > 500)); // true
