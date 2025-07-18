@@ -109,16 +109,19 @@ function includes(arr, element){
 
 console.log("Arr", arr);
 
+const arrx = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-arr.splice(2, 0, 11, 12, 13, 14)
+console.log("spliced array", arrx.splice(2, 3, 11 ))
 
-console.log("Splice", arr);
+// arr.splice(2, 0, 11, 12, 13, 14)
+
+console.log("Splice", arrx);
 
 
 
 let arr2= [1, 2, 3, 1, 1, 2, 3, 1];
 
-console.log(arr2.indexOf(1));
+// console.log(arr2.indexOf(1));
 
 function includes(arr, element){
     //indexOf
@@ -131,7 +134,7 @@ function includes(arr, element){
 
 
 //join -> joins the elements of the array into a string
-console.log(arr2.join(" ")); // "1 2 3 1 1 2 3 1"
+console.log(arrx.join(" ")); // "1 2 3 1 1 2 3 1"
 
 
 console.log(Math.min(...arr)); // NaN

@@ -237,3 +237,4 @@ function capitalizeWords (str){
 }
 
 console.log(capitalizeWords("hello hello hey hey haha"))
+
