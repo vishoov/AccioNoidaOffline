@@ -12,13 +12,20 @@
 // console.log(7)
 
 
-// for(let i=0; i<=10; ++i){
-// console.log(i**2)
-// }
+for(let i=1; i<=10; ++i){
+console.log(i)
+}
 
 
 //for(initialisation, cndition, increment/decrement){
 //     logic
+// }
+
+// let array = [1,2,3,4,5,6,7,8,9]
+// for(let i=0, j=array.length-1; i<array.length; i++){
+
+//     console.log(array[i], array[j]);
+//     j--;
 // }
 
 //5 table
@@ -103,6 +110,12 @@ for(let i=1; i<arr1.length; i++){
         max=arr1[i]
     }
 }
+
+
+for(let i=1; i<10; i++){
+    console.log(i)
+}
+
 
 console.log(max);
 

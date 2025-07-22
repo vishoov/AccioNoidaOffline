@@ -106,7 +106,10 @@ JS names should always start with ->
 
 
 Js is Case sensitive 
-
+name
+Name
+NAME
+nAME
 
 let firstname, let firstName 
 
@@ -163,3 +166,15 @@ it just compares the values
 
 === -> type check 
 
+
+
+
+let sum = 0;
+let sum = a+ b;
+
+let -> reserved keyword for variable declaration 
+sum = variable reference 
+= -> assignment operator
+a+b-> Expresssions
++-> addition operation 
+a and b -> operants 

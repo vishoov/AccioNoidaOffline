@@ -22,3 +22,11 @@ let user = {
 const json = JSON.stringify(user); // converts the object to a JSON string
 
 console.log(json)
+
+const array = [3,4,5,6,7,8,1]
+
+for(let i=0; i<array.length; i++){
+    if(arr[i]%2==0){
+        console.log(arr[i])
+    }
+}

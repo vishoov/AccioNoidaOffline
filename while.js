@@ -28,19 +28,21 @@
 
 
 
+
+
 // let arr=[1, 2, 3, 4, 5, 6, 2, 1, 2, 3, 4];
 
 // let max = arr[0];
 // let i=1;
 
 // while(i<arr.length){
-    //     if(arr[i]>max){
-        //         max=arr[i]
-        //     }
-        //     i++;
-        // }
+//         if(arr[i]>max){
+//                 max=arr[i]
+//             }
+//             i++;
+//         }
         
-        // console.log(max)
+//         console.log(max)
         
         let arr1=[1, 4, 5, 68, 9, 4, 5, 4, 9]
         
@@ -185,3 +187,8 @@ for(i=stars-2; i>=1; i-=2){
     const line=spaces+starr;
     console.log(line)
 }
+
+
+// do{
+
+// }while()

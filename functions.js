@@ -118,10 +118,17 @@ const gret = function xyz(){
 }
 
 // gret()
-
+let a = 10
+let b = 20
 //3 Arrow Functions 
+
 let add = (a,b) => a+b;
 
+
+
+console.log("Added", add(a, b))
+
+//click -> message -> hello friends 
 
 const fruits = ["Apple", "Banana", "Pineapple"]
 
@@ -183,16 +190,16 @@ console.log(sum(1, 2, 3,4, 2, 4, 2, 3, 2, 4, 2, 4))
 //     };
 // }
 
-function calculatePower(fn, number) {
-    return fn(number);
-}
+// function calculatePower(fn, number) {
+//     return fn(number);
+// }
 
-// Example usage:
-const square = power(2);        // returns a function: x => x ** 2
-const cube = power(3);          // returns a function: x => x ** 3
+// // Example usage:
+// const square = power(2);        // returns a function: x => x ** 2
+// const cube = power(3);          // returns a function: x => x ** 3
 
-console.log(calculatePower(square, 5)); // 25
-console.log(calculatePower(cube, 2));   // 8
+// console.log(calculatePower(square, 5)); // 25
+// console.log(calculatePower(cube, 2));   // 8
 
 
 // function greet(name) {
@@ -235,6 +242,15 @@ console.log("output", addFive(3))
 //difference between arrow function and function declaration
 
 //what is a pure function 
+
+// function(...numbers){
+//     //how many numbers all are valid
+// }
+
+const arrey = [1,2,3,4,5]
+const arree = [...arrey, 10]
+console.log(arree)
+
 
 
 //create a function that remembers it previous calls 

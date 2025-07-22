@@ -1,3 +1,4 @@
+//We revised this file on 22/07/2025
 // // Arithmetic Operators
 
 
@@ -41,22 +42,66 @@
 
 // let equality = (a===b)
 
+//loose comparison for equality -> == 
+//strict comparison (type checked) => ===
+//comparison operators output boolean values 
+
+
+
 // console.log(equality)
+// 
+// console.log("4"===4)
+
+
+//Comparison 
+//greater than -> >
+//greater than or equal to -> >=
+//less than -> <
+//lessthan equal  to -> <=
+//equality -> ==, ===
+//not equal equal to -> !=
+// !
+
+//let check 
+//Falsy -> "", false, null, undefined, 0
+//Truthy-> {}, [], number, string, true
+
+
+// let check = ""
+// if(!check){
+//     console.log("Check is a falsy value")
+// }
 
 
 
+
+// console.log(2**8)
+console.log(17%3==0)
+
+
+//Short hand operators for arithmetics operations 
 
 
 // increment
 //2+2=4
-let i = 2;
+// let i = 2;
+
+// i/=2 //1
+// i%=3 //1
+// i**=2 //1
+// i++; //1-> 2
+// --i;//1
+
+
+// console.log(i*=10)
+
 
 //post increment -> first we access the variable 
 //pre increment -> first we increment the variable
 // console.log(i++);
-console.log(++i);
+// console.log(++i);
 // console.log(i++)
-console.log(i); 
+// console.log(i); 
 
 
 // decrement
@@ -78,7 +123,10 @@ let j = 5;
     
 // }
 
-//Asignment Operators 
+// let arr=[3,2,8,6,3,7]
+
+
+//Asignment Operators
 
 //+= -> sum += 5; // sum = sum + 5
 //-= -> difference -= 2; // difference = difference - 2

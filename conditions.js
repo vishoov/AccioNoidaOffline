@@ -1,6 +1,6 @@
 // Conditional Statement
-//Truthy -> true, 10, "string"
-//Falsy -> undefined, null, {}, [], "", false, NaN
+//Truthy -> true, 10, "string", {}, []
+//Falsy -> undefined, null,  "", false, NaN
 
 
 
