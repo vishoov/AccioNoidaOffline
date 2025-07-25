@@ -62,6 +62,7 @@ function printHollowDiamond(n){
         let space = Math.abs(n-i);
         let innerspaces = 2*(n-space)-3;
 
+        
         row+=' '.repeat(space);
 
         if(innerspaces<0){
@@ -79,3 +80,13 @@ function printHollowDiamond(n){
 printHollowDiamond(4)
 printHollowDiamond(5)
 printHollowDiamond(6)
+
+
+
+let array = [1,2,3,4,5,5];
+
+
+console.log(array["a"]=10);
+console.log(array)
+
+//type coercion 

@@ -3,21 +3,22 @@
 //visibility 
 
 // var number = 10;
-//Global Scope -> variables declared outside any function or black have global scope, these variables are ACCESSIB:E anywhere in the javascript program considering the concept of hoisting.
+
+//Global Scope -> variables declared outside any function or block have global scope, these variables are ACCESSIB:E anywhere in the javascript program considering the concept of hoisting.
 
 // // Global scope
-// var globalVar = "I am global";
-// let globalLet = "I am also global";
-// const globalConst = "I am global too";
+var globalVar = "I am global";
+let globalLet = "I am also global";
+const globalConst = "I am global too";
 
-// function displayGlobal() {
-//     console.log(globalVar); // Accessible from inside function
-//     console.log(globalLet); // Accessible from inside function
-//     console.log(globalConst); // Accessible from inside function
-// }
+function displayGlobal() {
+    console.log(globalVar); // Accessible from inside function
+    console.log(globalLet); // Accessible from inside function
+    console.log(globalConst); // Accessible from inside function
+}
 
-// displayGlobal(); // Works fine
-// console.log(globalVar); // Works fine - accessible outside function
+displayGlobal(); // Works fine
+console.log(globalVar); // Works fine - accessible outside function
 
 
 //characteristics 
