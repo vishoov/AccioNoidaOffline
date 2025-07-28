@@ -22,6 +22,11 @@
 //     ["white", "black", "white", "black", "white", "black", "white", "black"]
 // ]
 
+//chess[0][0]
+
+//arr0=arr[0][1]
+
+
 // console.log(chess[3][4])
 
 
@@ -46,6 +51,8 @@
 
 // console.log(users[1][2])
 
+
+// console.log("3D Array", ThreeDArray[0][0][1])
 
 // // Inialize a 2D array
 // //direct initialisation 
@@ -89,8 +96,8 @@
 // //using Array constructor with fill and map
 
 
-// const matrix3 = Array(rows).fill().map(() => Array(10).fill("Hell"));
-
+// const matrix3 = Array(3).fill().map(() => Array(10).fill("Hello"));
+// console.log(matrix3);
 // const matrix5 = Array(5).fill(0)
 // console.log(matrix5)
 

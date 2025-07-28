@@ -103,6 +103,32 @@ function includes(arr, element){
 
 //splice-> removes elements from the array and returns the removed elements
 
+
+function splice(array, startIndex, deleteCount, ...itemsToAdd){
+    const newArray = [];
+    //array before the startIndex
+    for(let i=0; i<startIndex; i++){
+        newArray.push(array[i])
+    }
+    //new elements to be added
+    // for(let i=0; i<itemsToAdd.length; i++){
+    //     newArray.push(itemsToAdd[i]);
+    // }
+
+    newArray.push(...itemsToAdd)
+
+    //array after the startIndex + deleteCount
+    for(let i=startIndex+deleteCount; i<array.length; i++){
+        newArray.push(array[i]);
+    }
+
+    return newArray;
+}
+
+let arree = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log("Splice", splice(arree, 2, 3, 11, 12, 15))
+
+
 // arr.splice(2, 3, 11, 12, 13);
 //removes 3 elements from index 2
 //arr.splice(startIndex, deleteCount, ...itemsToAdd)
@@ -139,7 +165,7 @@ console.log(arrx.join(" ")); // "1 2 3 1 1 2 3 1"
 
 console.log(Math.min(...arr)); // NaN
 
-
+// console.log("To String", arr.toString(" "))
 
 // Create Arrays
 
@@ -180,8 +206,24 @@ const doubled = numbers.map(function(num){
     console.log( num * 2);
 });
 //we always input a function to map
+let arr10= [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+const squaredArray = arr10.map(function(num){
+    return num*3
+})
 
+function map(array, callback){
+    const newArray = []
+    for(let i=0; i<array.length; i++){
+        newArray.push(callback(array[i], i, array))
+    }
+    return newArray;
+}
+console.log("Doubled", map(numbers, function(num){
+    return num * 2;
+}))
+
+console.log("Squared Array", squaredArray); // [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 //amazon -> search page 
 //products array -> [product1, product2, product3, product4, product5]
 // product{

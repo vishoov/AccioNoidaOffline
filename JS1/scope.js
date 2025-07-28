@@ -42,12 +42,14 @@ console.log(globalVar); // Works fine - accessible outside function
 //variables are only accessible inside the function where they are declared.
 //each function has its own scope, meaning variables declared in one function are not accessible in another function unless passed as parameters or returned.
 //variables are destroyed when the function execution is completed, meaning they are not available after the function has finished executing.
+// {}
+
 
 
 //Examples
 
+// let isValid = true; // Function-scoped validation flag
 // function createUserProfile(name, email) {
-//     var isValid = true; // Function-scoped validation flag
     
 //     function validateEmail(email) {
 //         // Helper function with access to parent scope
@@ -70,7 +72,7 @@ console.log(globalVar); // Works fine - accessible outside function
 // var user = createUserProfile("John Doe", "john@example.com");
 // // isValid and validateEmail are not accessible here
 // console.log(user)
-// console.log(isValid
+// console.log(isValid)
 
 
 //Variable Pollution // -> When multiple functions declare variables with the same name, it can lead to confusion and bugs. To avoid this, use unique variable names or block scope (using let or const).
@@ -111,22 +113,22 @@ console.log(globalVar); // Works fine - accessible outside function
 //Block Scope -> ES6 (2015)  introduced block scope with the `let` and `const` keywords. Variables declared with `let` or `const` inside a block (e.g., inside `{}`) are only accessible within that block.
 
 
-// function blockScope(){
-//     if(true){
-//         var x="I am var";
-//         let y = "I am let";
-//         const z = "I am const";
+function blockScope(){
+    if(true){
+        var x="I am var";
+        let y = "I am let";
+        const z = "I am const";
 
-//         console.log(x);
-//         console.log(y); 
-//         console.log(z); 
-//     }
+        console.log(x);
+        console.log(y); 
+        console.log(z); 
+    }
 
-//     console.log(x);
-//     // console.log(y); 
-//     console.log(z); 
+    console.log(x);
+    // console.log(y); 
+    // console.log(z); 
 
-// }
+}
 
 
 // blockScope();
@@ -186,6 +188,14 @@ import { myModule } from './module.js'; // Importing the function from module.js
 // const num = Math.random(); // Example of a module-scoped variable
 
 //Lexical Scope -> Lexical scope refers to the scope of variables based on their physical placement in the code. In JavaScript, functions are lexically scoped, meaning they can access variables from their parent scope, but not from child scopes. This is different from dynamic scope, where the scope is determined by the call stack at runtime.
+
+// module{
+//     function{
+//         variable
+//     }
+// }
+
+
 
 // function outerFunction(x) {
 //     // Outer function's scope
