@@ -73,7 +73,7 @@ for(const e of map2.entries()){
 //const a = {}, const b = {}
 
 
-//NaN equals NaN inside a mao
+//NaN equals NaN inside a map
 
 const map4 = new Map(
     [
