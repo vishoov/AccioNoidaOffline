@@ -157,7 +157,7 @@ function addScore(score){
     let j = topScores.length-1;
 
 //shifting
-    while(j>=0 && topScores[j]>score){
+    while(j>=0 && topScores[j]<score){
         topScores[j+1]=topScores[j];
         j--;
     }
@@ -167,7 +167,7 @@ function addScore(score){
     topScores[j+1] = score;
 
         if(topScores.length>5){
-            topScores=  topScores.slice(-5);
+            topScores=  topScores.slice(0,5);
         }
 
     
