@@ -1,0 +1,169 @@
+HTML -> for structuring
+
+index -> a clear endpoint file that connects to the whole project 
+
+
+HTML-> hyper text markup language 
+
+-> script 
+-> structure 
+-> text & formatting 
+-> Media and images 
+-> Navigation 
+-> Tables
+-> FORMS
+-> Comments 
+
+
+HTML file structure 
+
+
+HTML CSS JS -> get executed TOP-TO-BOTTOM
+
+HTML 
+-> head -> tab title, metaData 
+-> body -> UI or viewport or what we see on the screen 
+
+
+
+
+2 Types of Tags we have based on syntax 
+
+Pair Elements
+Self Closing 
+
+
+Attributes -> characteristics of a tag 
+Types 
+
+Global Attributes 
+id -> identification 
+class -> categorization 
+style-> styling 
+title-> title of content 
+
+
+Element-specific 
+
+href -> link 
+src-> 
+alt-> 
+width/height
+
+
+Event Attributes 
+
+onClick 
+onMouseOVer
+onMouseOut
+onChange 
+onSubmit
+
+Input Type Attributes 
+
+
+
+
+<input Type="text">
+
+
+
+
+<h5>Ordered List</h5>
+    <!-- List Tag -->
+     <!-- Ordered List -->
+      <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+
+        <li>Node.js</li>
+        <li>Database</li>
+        <li>Deployment</li>
+      </ol>
+
+      <h5>Unordered List</h5>
+      <!-- Unordered List -->
+       <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+
+        <li>Node.js</li>
+        <li>Database</li>
+        <li>Deployment</li>
+       </ul>
+
+
+
+
+
+Text formatting
+
+1. bold -> b or strong
+2. italic -> <i> or <em>
+3. underline -> <u>
+4. highlight -> <mark>
+5. subscript -> <sub>
+6. power -> <sup>
+
+preformatted text 
+
+<pre>
+</pre>
+
+HTML Tags 
+
+-> <html> -> root element 
+-> <head> -> metaData
+-> <body> -> UI 
+
+Text Tags 
+
+-> <h1> to <h6> -> heading tags 
+-> <p> -> context 
+-> <span> -> for selecting a certain text from any text tag
+
+Google-> robots -> crawlers -> takes your text content -> and finds most popular keywords 
+
+
+
+
+HTML 5 -> 
+Semantic Tags ->named tags but they are clearly describing thier purpose 
+
+1. <header>  -> helping us in pin the content to the top or the first screen that is loaded 
+2. <nav> -> sticky, top, width:100vw
+3. <main> -> specifies the main content 
+4. <section> -> grouping of content 
+5. <footer>
+6 <article>
+
+MOST POPULAR TAG -> generic container with no semantic meaning
+
+<div> </div>
+
+List Elements 
+
+1. ordered list 
+
+<ol>
+<li>List Item</li>
+</ol>
+
+2. Unordered List   
+
+<ul>
+<li></li>
+</ul>
+
+
+Links and Navigation 
+
+1. Hyperlink -> 
+
+<a href="https://maps.app.goo.gl/d5PzQzLKKYMCuoKB7"> </a>
+
+MEDIA ELEMENTS 
+
+1. Image -> <img src="/image.jpg>

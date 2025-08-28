@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giggle</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <link rel="icon" href="./icons8-google-16.png" type="image/x-icon">
+    <!-- meta tags for google -->
+    <meta name="description" content="Giggle is a search engine that provides fast and accurate search results.">
+    <meta name="keywords" content="search engine, giggle, fast search, accurate search">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph meta tags for social media -->
+    <meta property="og:title" content="Giggle - Fast and Accurate Search Engine">
+    <meta property="og:description" content="Giggle is a search engine that provides fast and accurate search results.">
+    <meta property="og:image" content="https://example.com/og-image.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+
+    <style>
+        .box{
+            margin: 10px;
+            display: inline-block;
+            border:1px solid black;
+            padding: 10px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        #box5{
+            background-color: blue !important; /* highest priority */
+        }
+    </style>
+
+</head>
+<body>
+<!-- HTML Tags -> they are of 2 types -->
+<!-- semantic tags, block tags  -->
+
+<div style="height: 100px; width: 100px; background-color: blue !important;"
+onClick = "alert('Box Clicked')"
+class="box" id="box1">
+<h1>Giggle</h1>
+
+<!-- onMouseOver="alert('Mouse Over')" -->
+<!-- onMouseOut="alert('Mouse Out')" -->
+</div>
+<div style="height: 100px; width: 100px; background-color: red;" class="box" id="box1">
+    <h1>Giggle</h1>
+    
+    </div><div style="height: 100px; width: 100px; background-color: red;" class="box" id="box1">
+        <h1>Giggle</h1>
+        
+        </div><div style="height: 100px; width: 100px; background-color: red;" class="box" >
+            <h1>Giggle</h1>
+            
+            </div><div style="height: 100px; width: 100px; background-color: red;" class="box">
+                <h1>Giggle</h1>
+                
+                </div>
+                <div style="height: 100px; width: 100px; background-color: red;" class="box">
+                    <h1>Giggle</h1>
+                    
+                    </div>
+    
+                    <h1>Beetles</h1>
+                    <h2>External morphology</h2>
+                    <h3>Head</h3>
+                    <h4>Mouthparts</h4>
+                    <h3>Thorax</h3>
+                    <h4>Prothorax</h4>
+                    <h4>Pterothorax</h4>
+
+                    <img src="https://sxcontent9668.azureedge.us/cms-assets/assets/Mars_Web_8fafe15a48.jpg" alt="Flowers in Chania" height="100" width="100">
+                    <img src="https://picsum.photos/200" alt="Flowers in Chania" height="100" width="100">
+
+                    <input onchange="printInput(this)"" type="text" placeholder="Enter your name">
+
+<script>
+    function printInput(ele){
+        console.log(ele.value);
+    }
+</script>
+</body>
+</html>
