@@ -26,7 +26,6 @@
 //Big O Notation (O)
 //big o represents the upper bound or worst-case scenario of an algorithm's complexity
 
-//
 
 
 
@@ -112,12 +111,10 @@ function countElements(arr){
     return count
 }
 
-// Big Q(n)
 
+//Big O -> tells the worst case scenario -> helpful 
 // Big Q Notation -> average case 
-
-
-//Big Omega
+//Big Omega -> tells best case of the algorithm
 
 //lower bound
 
@@ -134,6 +131,16 @@ function countVowels(str){
 }
 
 //O(n)
+
+let userProfile = "abcdefghijklmnopqrstuvwxyz";
+let map = new Set();
+
+for (let i = 0; i < userProfile.length; i++) {
+  for (let j = i + 1; j < userProfile.length; j++) {
+
+    map.set(userProfile.slice(i, j));
+  }
+}
 
 const doubled = arr.map(x=>x*2)
 
