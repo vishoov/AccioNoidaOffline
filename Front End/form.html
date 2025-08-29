@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body style="background-color: rgb(58, 104, 120); display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; flex-direction: column;">
+    <h1>Welcome to forms</h1>
+    <div class="form-container" style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 50vw;">
+        <!-- form is used for collecting data from user -->
+         <!-- form outputs an object  -->
+          <!-- object should key:Value -->
+
+          <!-- Data validation -->
+          <!-- action="https:/thedestinationlink" method="get" -->
+        <form onsubmit="submitForm()" style="display: flex; flex-direction: column; gap: 10px; width:100%;">
+            <!-- describe a field -->
+             <label for="username">UserName: </label>
+             <input type="text" id="username" name="username" placeholder="Enter your username" onchange="printInput()" required>
+
+             <label for="email">Email: </label>
+             <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <label for="subscribe">Subscribe to newsletter: </label>
+             <input type="checkbox" id="subscribe" name="subscribe">
+
+            <label for="password">Password: </label>
+                <input type="password" id="password" name="password" placeholder="Enter your password"  >
+
+                <label for="age">Age: </label>
+                <input type="date" id="age" name="age" >
+
+              <label for="time" >Time: </label>
+              <input type="time" id="time" name="time" >
+
+            <!-- selection -->
+             <input type="radio" id="option" name="option" value="option1" required>
+            <label for="gender">Male</label>
+            <input type="radio" name="gender" value="male" >
+            <label for="gender" >Female</label>
+            <input type="radio" name="gender" value="female">
+
+
+             <!-- <input type="number" id="number" name="number" placeholder="Enter a number" required min="1" max="9999999999"> -->
+
+            <!-- Files -->
+             <input type="file" id="file" name="file" multiple>
+            <input type = "color" id="color" name="color">
+            <input type="range" id="range" name="range" min="1000" max="5000">
+
+            <textarea rows="4" cols="50" placeholder="Enter your address here..."></textarea>
+            <select name = "Country">
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+            </select> 
+            
+           
+
+            <button type="submit">Submit</button>
+
+
+        </form>
+
+    </div>
+    <script>
+        function submitForm(e){
+            e.preventDefault(); // Prevent form submission
+            console.log(e.target.username.value);
+            alert("Form submitted successfully!");
+            return;
+        }
+
+        function printInput(){
+            let input = document.getElementById("username").value;
+            console.log(input);
+            return;
+        }
+    </script>
+</body>
+</html>
