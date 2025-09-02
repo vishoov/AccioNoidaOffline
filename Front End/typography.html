@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&display=swap" rel="stylesheet">
+    <title>Typography</title>
+    <style>
+        .hehe {
+  font-family: "Libertinus Keyboard", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+    /* @font-face is used to define a custom font from a local font woff or ttf file */
+        @font-face {
+            font-family: 'Shivam Font';
+            src: url(./fonts/Bungee_Color_Fonts/BungeeColor-Regular_svg.ttf);
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        p{
+            font-family:'Shivam Font', cursive;
+            font-size: 150px;
+            font-weight:1000;
+            /* color: purple; */
+            text-align:justify;
+            text-transform:capitalize;
+            /* letter-spacing: -20px; */
+            line-height: 1.6;
+            word-spacing: 10px;
+            text-shadow: 5px 5px 5px grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Typography</h1>
+
+    <p class="hehe">
+        This is the sample text
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+CSS Cascading Style Sheets 
+
+every browser has a default stylesheet 
+
+block styling 
+
+-> style html pages
+-> responsive design 
+-> maintain a brand identity 
+-> improve UX 
+
+
+CSS is not a programming language -> style sheet language 
+
+
+selector {
+    property:value;
+}
+
+.main -> we use . for class
+#1 -> # for id
+h1-> named tags (element selector)
+* -> universal selector
+
+
+Ways to implement CSS
+
+1. inline - through style attirbute
+2. internal -> through <style>  tag
+3. External links -> is used through <link > tag
+
+CSS Box Model 
