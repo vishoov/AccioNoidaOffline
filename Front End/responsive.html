@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           /* media queries */
+         @media(min-width: 1024px){
+
+         
+        .container{
+            height: 200px;
+            width: 100vw;
+            background-color: lightblue !important;
+        }
+
+        .box1{
+            position: relative;
+            height: 200px;
+            width:50vw;
+            background-color: coral;
+            margin: 10px;
+        }
+    }
+        @media (max-width:768px){
+            .box1{
+                background-color: yellow;
+                width: 100vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="background-color: lightcoral;">
+        <div class="box1">box 1</div>
+        
+    </div>
+
+    <div class="brwaks">
+        <h1>Mobile Sizs: up to 768px</h1>
+        <h2>Table : 768px to 1024px</h2>
+        <h3>Desktop: 1024px and above</h3>
+    </div>
+    
+</body>
+</html>

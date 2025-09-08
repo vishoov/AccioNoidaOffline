@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: lightblue;
+            height: 200px;
+            width: 10vw;
+            display: inline-block;
+        }
+
+        .container2{
+            display: inline-block;
+            background-color: coral;
+        }
+
+        @media (max-width: 768px){
+        .container{
+            display:none
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Hello world
+    </div>
+    <div class="container2">
+    hello
+    </div>
+
+    <div class="display">
+        <h1>Display Settings</h1>
+        <p>Display:none -> that the element will not be displayed</p>
+        <p>Display:block-> this is the default styling of HTML where each element takes up the whole width of the viewport</p>
+        <p>Display:inline-block-> it allows next element to take up the space that is left in the width</p>
+        <p>Display:inline-> it allows next element to take up the space that is left in the width but it does not allow to set height and width</p>
+        <p>Display:flex -> this enables flexbox</p>
+        
+    </div>
+
+<style>
+    .product-cards{
+        height: 50vh;
+        width: 100vw;
+        background-color: lightgray;
+    }
+
+    .product-card{
+        border: 1px solid black;
+        width: 200px;
+        display: inline-block;
+        height:200px;
+        position: relative;
+        padding: 20px;
+        margin: 10px;
+    }
+</style>
+
+    <div class="product-cards">
+        <div class="product-card"></div>
+        <div class="product-card"></div>
+        <div class="product-card"></div>
+        <div class="product-card"></div>
+    </div>
+</body>
+</html>

@@ -5,26 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Units</title>
     <style>
-        body{
+      
+
+       body{
             height: 1000px;
+            font-size: 160px;
         }
         .box1{
             background-color: red;
             /* font-size: 10px; */
             height: 50rem;
-            width: 50rem;
+            width: 50%;
+            min-width: 300px;
+            max-width: 300px;
         }
 
     </style>
 </head>
 <body>
     <h1>CSS units</h1>
-    <h2>Absolute -> px, pt, cm, inches</h2>
+    <h2>Absolute -> px, pt, cm, mm inches</h2>
     <h2>Relative-> %, em, rem, vh/vw</h2>
-<div class="div" style="height: 1000px ">
+
+    <p>%-> percentage = parents</p>
+    <p>vw, vh -> viewport height and viewport width </p>
+    <p>em and rem -> these help us in sizing the elements in comparison to text sizes </p>
+    <p>em -> used to determine size in comparison with currebnt element's font size</p>
+
+
+
+    <p>Absolute sizes provide fixed length </p>
+    <p>Relative sizes provide variable length or flexible lengths </p>
+
+    <h1>Max and Min properties</h1>
+    <p>max-width, max-height</p>
+
     <div class="box1">
         This is box1
     </div>
-</div>
+
+    <div class="wrapper" style="height:500px;width:500px; background: grey">
+        PARENT
+    <div class="box2" style="height: 50%; width: 50%; background-color: blue;">
+        CHILD
+    </div>
+    </div>
+
+    <div class="box3" style="background: pink; height: 500vh; width: 50vw;"></div>
+
+    <div class="box4" style="background-color: orange; height: 10em; width: 10em; font-size: 20px;">
+        em and rem
+    </div>
+
 </body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions CSS</title>
+</head>
+<body>
+    <div class="box1" style="width: 100vw; height: 200px; background-color: skyblue; position: relative; bottom: 0;"></div>
+    <div class="box1" style="width: 100vw; height: 100px; background-color: lightcoral; position: sticky; top:0; z-index:0;" ></div>
+
+    <h2>Positions</h2>
+    <p>static, relative, absolute, fixed, sticky</p>
+
+
+
+    <ul>
+        <li>static - default position according to html flow</li>
+        <li>relative - relative to its original position</li>
+        <li>absolute - relative to its nearest positioned ancestor</li>
+
+
+
+    </ul>
+
+
+    <div class="wrapper" style="height: 500px; width: 500px; background-color: antiquewhite; position: relative;">
+        <div class="child1" style="background-color: aqua; height: 50px; width: 100%;">Child 1</div>
+        <div class="child1" style="background-color: pink; height: 50px; width: 100px; position: fixed; bottom: 5%; right: 5%;">Contact Us</div>
+    </div>
+
+    <p>absolute positioning lets us position the child element in comparison with the parent element but the parent element should have relative position</p>
+
+    <p>fixed position compares the distance with viewport</p>
+    <p>sticky is used for navbar to stick it to the top when we scroll</p>
+</body>
+</html>

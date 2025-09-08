@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+        }
+
+        .product-card{
+            border: 1px solid black;
+            width: 200px;
+            
+            height:200px;
+            position: relative;
+            padding: 20px;
+        }
+
+        .batch{
+            background-color: red;
+            width: 50px;
+            text-align: center;
+            color: white;
+            position: absolute;
+            right: -10px;
+            border-radius:5px;
+            top: -10px;
+        }
+
+        .floating{
+            position:fixed;
+            right: 10px;
+            bottom: 10px;
+            background-color: blue;
+            padding: 7px;
+            color: white;
+            border-radius: 5px;
+        }
+        .colored{
+            /* margin:10px 20px; */
+            /* margin-> takes two values -> top-bottom right-left */
+            /* margin: top right bottom left */
+            /* margin: 0 0 0 0; */
+            /* margin:0 auto; */
+            /* margin-left, margin-right, margin-top, margin-bottom */
+            width: 80%;
+            position: absolute;
+            margin: auto;
+            height: 80%;
+            background-color: rgb(25, 146, 186);
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Product Card</h1>
+
+    <div class="product-card">
+        <div class="batch">New!</div>
+        <div class="colored">
+
+        </div>
+    </div>
+
+    <div class="floating">
+        Help
+    </div>
+</body>
+</html>
