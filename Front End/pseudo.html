@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+
+        .box:hover{
+            border: 10px solid black;
+        }
+
+
+        .btn{
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: darkblue;
+        }
+        
+        #box1:active{
+            background-color: yellow;
+        }
+
+        button:hover{
+            transform: scale(1.1);
+
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            gap: 10px;
+            background-color: white;
+
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+
+
+
+        input:focus{
+            outline: 2px solid blue;
+            box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+        }
+
+        /* when we have to implement styles only for required inputs */
+        input:required{
+            border: 2px solid red;
+        }
+
+        input:optional{
+            border: 2px solid green;
+        }
+
+        input[type="password"]:focus{
+            outline: 2px solid green;
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+        }
+
+        a{
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        a:visited{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+<!-- pseudo classes are those keywords which we use to implement styles on elements on event basis -->
+
+    <div class="box" id="box1">
+        Box
+    </div>
+    <br>
+    <br>
+    <button class="btn">Click Me</button>
+    <br>
+    <br>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" placeholder="Enter Name" required>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter Email" required>
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter Password" >
+    </form>
+
+    <br>
+    <br>
+
+    <a href="#" target="_blank">Hover Me</a>
+
+    <br>
+    <br>
+
+    <h3>List</h3>
+<style>
+    /* li:first-child{
+        color: red;
+    }
+
+    li:last-child{
+        color: green;
+    } */
+/* nth-child this helps us in selecting the nth child (based on the n value) some specific styles */
+    /* li:nth-child(3){
+        color: blue;
+     } */
+
+    li:nth-child(odd){
+        background-color: lightgray;
+    }
+
+    li:nth-child(even){
+        background-color: lightblue;
+    }
+</style>
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+        <li>Fourth Item</li> 
+    </ul>
+
+<style>
+    table, th, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th{
+        background-color: lightgray;
+    }
+
+    tr:nth-child(2n-1){
+        background-color: lightyellow;
+    }
+    tr:nth-child(2n){
+        background-color: lightgreen;
+    }
+
+</style>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>25</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>30</td>
+            <td>Los Angeles</td>
+        </tr>
+        <tr>
+            <td>Mike</td>
+            <td>28</td>
+            <td>Chicago</td>
+        </tr>
+        <tr>
+            <td>Sara</td>
+            <td>22</td>
+            <td>Miami</td>
+        </tr>
+    </table>
+
+<style>
+    .highlighted{
+        background-color: yellow;
+    }
+
+    p:not(.highlighted){
+        background-color: lightgray;
+    }
+</style>
+    <div>
+        <p class="highlighted">This is a highlighted text</p>
+        <p>Normal Paragraph</p>
+    </div>
+</body>
+</html>
+
+<!-- Pseudo Classes 
+.element_class
+:hover -> when we hover on an element this class will be applied 
+:active -> when we click on an element this class will be applied
+:focus -> when we focus on an element like input box this class will be applied
+:visited -> when we visit a link this class will be applied
+
+-->
