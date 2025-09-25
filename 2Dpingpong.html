@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .container{
+        position: relative;
+        height: 400px;
+        width: 300px;
+        background-color: lightblue;
+        overflow: hidden;
+    }
+
+    .player1, .player2{
+        position: absolute;
+        height: 20px;
+        width: 100px;
+        background-color: black;
+        top: 0;
+        left: 100px;
+    }
+
+    .player1{
+        animation: movePaddle 3s ease infinite;
+
+    }
+
+    .player2{
+        bottom: 0;
+        top: auto;
+        right: 100;
+        left: auto;
+        animation: movePaddle 3s ease infinite;
+        animation-direction: reverse;
+    }
+
+   
+
+    @keyframes movePaddle{
+        0%, 100%{
+            left:0px;
+        }
+        50%{
+            left: 200px;
+        }
+    }
+
+
+
+    .ball{
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: red;
+        border-radius: 50%;
+        top: 190px;
+        left: 90px;
+        animation: ballAnimation 3s linear infinite;
+    }
+
+    @keyframes ballAnimation{
+        0%{
+            top: 190px;
+            left: 0px;
+        }
+        25%{
+            top:20px;
+            left: 190px;
+        }
+        50%{
+            top: 190px;
+            left: 280px;
+        }
+        75%{
+            top: 360px;
+            left: 190px;
+        }
+        100%{
+            top: 190px;
+            left: 0px;
+        }
+
+    }
+
+
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="player1"></div>
+        
+        <div class="ball"></div>
+        <div class="player2"></div>
+
+
+    </div>
+</body>
+</html>
