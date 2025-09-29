@@ -1,0 +1,8 @@
+
+
+<!-- Heirarchal  Organization-->
+
+<!-- root -> html element -->
+ <!-- parent-child relationships  -->
+  <!-- sibling relationships  -->
+   <!-- each element can have attributes nodes, text node, child elements' nodes -->

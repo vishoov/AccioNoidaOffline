@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divstyle{
+            height: 100px;
+            width: auto;
+            background-color: lightblue;
+            border: 2px solid black;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .divstyle2{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title" style="color: red;" id="hello">Hello World</h1>
+    <input id="input" type="text" placeholder="Enter your name">
+    <img src="https://via.placeholder.com/150" alt="Placeholder Image" id="image">
+
+<div></div>
+        
+    <script>
+        //Content Methods of Query Selector
+        //textContent
+        //innerText
+        //innerHTML
+        const element = document.querySelector('#hello');
+        const vari = hello;
+
+        element.innerHTML=`Hello <span style="color:red">${vari.textContent1}</span>`;
+
+        //Attribute Methods of Query Selector
+        //getAttribute
+        const img = document.querySelector('#image');
+        const src = img.getAttribute('src');
+        console.log(src);
+
+        img.setAttribute('alt', 'https://via.placeholder.com/300');
+        console.log(img.getAttribute('alt'));
+
+
+        //remove attribute
+        img.removeAttribute('alt');
+        console.log(img.getAttribute('alt'));
+
+        //hasAttribute
+        console.log(img.hasAttribute('alt'));
+
+    // Style Methods of Query Selector
+
+    //style 
+        element.style.fontSize='50px';
+        element.style.color='';
+
+        const div = document.querySelector('div');
+
+        //Class Based Styling
+        // div.setAttribute('class', 'divstyle');
+
+        //1. className
+        // div.className='divstyle';
+
+        //2. classList
+        div.classList.add('divstyle');
+        div.classList.remove('divstyle');
+        div.classList.toggle('divstyle');
+        div.classList.replace('divstyle', 'newClass');
+        div.classList.contains('divstyle'); //true or false
+        
+    </script>
+</body>
+</html>

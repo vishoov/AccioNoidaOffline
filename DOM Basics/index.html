@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hello" class="title">Hello World</h1>
+    <h1 id="hello" class="title">Hello World</h1>
+    <h1 id="hello" class="title">Hello World</h1>
+    <h1 id="hello" class="title">Hello World</h1>
+    <h1 id="hello" class="title">Hello World</h1>
+
+
+    <script>
+        //Query Selector -> its just selecting an element
+        // const title = document.getElementsByClassName('title')
+
+
+        //queryselector using id
+        // const title = document.getElementById('hello');
+
+
+        //queryselector using tag name
+        // const title = document.getElementsByTagName('h1');
+
+
+        //querySelector
+        const title = document.querySelectorAll('.title');
+        console.log(title);
+        //HTMLCollection 
+        // getElementsByClassName
+        // getElementsByTagName
+        
+        //NodeList
+        // querySelectorAll
+        // querySelector
+    </script>
+</body>
+</html>
