@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            height: 80vh;
+            width: 80vw;
+
+background-color: lightblue;
+
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Click me</h1>
+
+    </div>
+
+    <script>
+        const div = document.querySelector('.container');
+
+        div.addEventListener('mouseover', function(){
+            div.style.backgroundColor='yellow'
+            div.innerHTML='<h1>Mouse Over Event Triggered</h1>'
+        })
+
+        div.addEventListener('mouseout', function(){
+            div.style.backgroundColor='lightblue';
+            
+            div.innerHTML='<h1>Click me</h1>'
+        })
+    </script>
+</body>
+</html>

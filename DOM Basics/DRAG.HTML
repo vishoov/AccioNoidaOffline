@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #dragDiv {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+    <div id="dragDiv">Drag</div>
+
+    <script>
+        const div = document.getElementById('dragDiv');
+        let dragging = false;
+        let offsetX, offsetY;
+
+        div.addEventListener('mousedown', (e) => {
+            dragging = true;
+            offsetX = e.clientX - div.offsetLeft;
+            offsetY = e.clientY - div.offsetTop;
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (dragging) {
+                div.style.left = (e.clientX - offsetX) + 'px';
+                div.style.top = (e.clientY - offsetY) + 'px';
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            dragging = false;
+        });
+    </script>
+</body>
+</html>

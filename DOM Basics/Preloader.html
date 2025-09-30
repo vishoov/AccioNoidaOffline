@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+        .preloader{
+            height: 100vh;
+            width: 100vw;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            /* display: none; */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="preloader">
+        Loading...
+    </div>
+
+    <div class="content">
+        <h1>Welcome to the main content!</h1>
+        <p>This is where your main page content goes.</p>
+        <p>Enjoy browsing!</p>
+    </div>
+
+    <script>
+        document.addEventListener(
+            //event type or name
+            'DOMContentLoaded',
+            //callback function
+            function(){
+
+
+
+
+                const preloader = document.querySelector('.preloader');
+                // setTimeout(() => {
+                //     preloader.style.display='none';
+                // }, 3000);
+
+                preloader.style.display='none';
+            }
+        );
+    </script>
+</body>
+</html>

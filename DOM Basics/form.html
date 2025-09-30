@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            gap: 20px;
+        }
+
+        input{
+            padding: 10px 20px;
+            font-size: 20px;
+        }
+
+        button{
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+
+    <form id="form">
+        <input type="text"  
+        name="username"
+            id="username"
+        placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const form = document.querySelector('#form');
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+
+            const name = document.querySelector('#username').value;
+
+            const obj = {
+                username:name
+            }
+
+            console.log(obj);
+
+        })
+
+        const input = document.querySelector('#username');
+
+        //focus, submit,
+        input.addEventListener('blur', function(){
+            input.style.backgroundColor='lightblue';
+        })
+    </script>
+    
+</body>
+</html>

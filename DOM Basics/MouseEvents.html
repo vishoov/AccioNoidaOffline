@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        button{
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        p{
+            font-size: 28px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button>Click Me!!</button>
+        <p>Click the button above</p>
+    </div>
+    <script>
+        const button = document.querySelector('button');
+        button.addEventListener('dblclick', function(event){
+            event.preventDefault();
+
+            const para = document.querySelector('p');
+            para.textContent='Button Clicked!';
+})
+
+button.addEventListener('mousedown', function(e){
+            e.preventDefault();
+
+            const para = document.querySelector('p');
+            para.textContent='Mouse Down Event Triggered!';
+})
+
+button.addEventListener('mouseup', function(e){
+            e.preventDefault();
+
+            const para = document.querySelector('p');
+            para.textContent='Mouse Up Event Triggered!';
+})
+    </script>
+</body>
+</html>
