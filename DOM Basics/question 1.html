@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .open-modal{
+            position: fixed;
+
+        }
+
+        .modal{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 50vh;
+            width: 50vw;
+            background-color: rgba(240, 128, 128, 0.36);
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        .disappear{
+            display: none;
+            
+        }
+
+        #close-btn{
+            height: 30px;
+            width: 70px;
+            align-self: flex-end;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="toggle">Toggle Modal</button>
+    <div class="container">
+        <button class="open-modal disappear">Open Modal</button>
+    <div class="modal">
+        <button id="close-btn">Close</button>
+        <p>Please Sign up to get latest offers</p>
+        <form >
+
+            <input type="text" placeholder="Enter Your Email">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    //1. building the close button functionalitity 
+    //2. click a button-> modal disappears 
+
+    const closeButton = document.getElementById('close-btn');
+    const modal = document.querySelector('.modal');
+    const openModal = document.querySelector('.open-modal')
+
+
+    closeButton.addEventListener('click', function(e){
+        modal.classList.add('disappear')
+        openModal.classList.remove('disappear')
+    })
+
+    openModal.addEventListener('click', function(e){
+        modal.classList.remove('disappear')
+        openModal.classList.add('disappear')
+        //multiple style changes logic
+    })
+
+
+    //open modal -> modal open -> open modal -> disappear 
+    const toggleModal = document.querySelector('.toggle');
+
+    // toggleModal.addEventListener('click', function(e){
+    //     modal.classList.toggle('disappear');
+    //     openModal.classList.toggle('disappear')
+    // })
+
+    //add and remove -> efficient 
+    toggleModal.addEventListener('click', function(e){
+        if(modal.classList.contains('disappear')){
+            modal.classList.remove('disappear')
+        }else{
+            modal.classList.add('disappear')
+        }
+
+        if(openModal.classList.contains('disappear')){
+            openModal.classList.remove('disappear')
+        }else{
+            openModal.classList.add('disappear')
+        }
+    })
+</script>
+</body>
+</html>
+
+
+
+<!-- Style Attribute Manipulation  -->
+ <!-- Limitations  -->
+  <!-- 1. Creating inline styles that override the CSS classes -->
+   <!-- 2. Poor Seperation of Concerns  -->
+    <!-- 3. Difficult to debug and maintain  -->
+     <!-- 4. Difficult to manipulate multiple styles -->
+
+<!-- classList Method -->
+<!-- 1. Better seperation of concerns -->
+ <!-- 2. Easier maintainance and debugging -->
+  <!-- 3. More flexible more reusable (v v imp) -->
+   <!-- 4. Better performance for complex style changes  -->
+
+
+   <!-- element.classList.methods -->
+    <!-- element.classList.add -> adds a class name to an element attribute -->
+     <!-- element.classList.remove -> removes a class name from an element attribute -->
+      <!-- element.classList.toggle('disappear') -> if this className exists so it will remove and vice versa  -->
+       <!-- element.classList.replace('class1', 'class2') class1 remove, class2 added-->
+
+       <!-- element.classList.contains -> boolean output -->

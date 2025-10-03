@@ -1,0 +1,118 @@
+Reflow -> whenever browser recalculates element positions, sizing, layout when DOM structure or any specific CSS properties change 
+
+
+Example const element = document.getElementById('element');
+
+element.style.width='300px'
+height
+padding
+margin
+fontSize
+display
+positions
+gap
+border 
+
+
+Repaint -> Visual Properties only are changing without any layout change
+
+
+element.style.color
+backgroundcolor
+bordercolor
+opacity
+
+
+DOM Thrashing or Layout Thrashing 
+
+Example 
+element.style.width='200px'
+element.style.height='200px'
+element.style.margin='200px'
+element.style.padding='200px'
+
+
+Solution -> 
+1. classList method 
+
+2. Document Fragments 
+
+
+const products = fetch('api')
+
+products = [
+    {
+        name:"iphone",
+        seller:"apple",
+        description:"17 pro",
+        price:"125000"
+    },
+    {
+
+    },
+    {
+
+    }
+    ....100 products 
+]
+
+products.map((ele)=>{
+    <div>
+    <h1>${ele.title}</h1>
+    <img src=${ele.image} />
+    </div> 
+    container.appendChild(product)
+})
+
+
+const fragment = document.createDocumentFragment();
+//create a variable named fragment in memory only 
+
+products.map((ele){
+    const newElement = document.createElement('div');
+    newElement.innerHTML = '<div>
+        <h2>${title}</h2>
+        </div>'
+    fragment.appendChild(newElement); NO REFLOW IS HAPPENING TILL NOW
+})
+
+document.getElementById('parent').appendChild(fragment);
+
+
+1. create a fragment -> everything will be happening inside memory
+2. there will be no layout recalculations 
+3. Batch Transfer 
+4. fragment disappear 
+
+
+
+
+3. DOM Element Caching
+
+const header = document.getElementById('header');
+
+header.style.color="red";
+
+4. Node Cloning 
+
+
+const element = document.getElementById('big-ele');
+const cloneelement = element.cloneNode(true);
+
+
+cloneelement.innerHTML = newContent;
+cloneElement.classList.add('newclass')
+cloneElement.style.scale='1.1'
+
+element.parentNode.replaceChild(cloneelement, element);
+
+
+
+Best practices for DOM efficiency 
+
+1. instead of style attribute updates, prefer classList methods
+2. DocumentFragment -> in-memory, no reflow highly efficient way of DOM manipulation
+3. Cache DOM elements 
+4. Node Cloning 
+5. Group DOM updates 
+
