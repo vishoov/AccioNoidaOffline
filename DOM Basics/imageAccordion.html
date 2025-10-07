@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="panel active" id="panel-1" style="background-image: url('https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+          <p class="img-text">Explore the world</p>
+        </div>
+        <div class="panel" id="panel-2" style="background-image: url('https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+          <p class="img-text">Wild Forest</p>
+        </div>
+        <div class="panel" id="panel-3" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80')">
+          <p class="img-text">City on Winter</p>
+        </div>
+        <div class="panel" id="panel-3" style="background-image: url('https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80')">
+            <p class="img-text">Mountain Cloud</p>
+          </div>
+          <div class="panel" id="panel-3" style="background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
+            <p class="img-text">Sunny Beach</p>
+          </div>
+      </div>
+      
+      <style>
+        .container {
+          display: flex;
+          width: 600px;
+          height: 300px;
+        }
+        .panel {
+          width: 10%;
+          background-size: cover;
+          background-position: center;
+          cursor: pointer;
+          display: flex;
+          align-items: flex-end;
+          color: white;
+          padding: 10px;
+          font-size: 20px;
+          transition: width 0.5s ease-in-out;
+        }
+
+        .active {
+          width: 50%;
+        }
+
+        .panel .img-text {
+            display: none;
+        }
+
+        .active .img-text {
+        display: block;
+        }
+      </style>
+      
+      <!-- <script>
+        const panel2 = document.querySelector('#panel-2');
+        const panel1= document.querySelector("#panel-1")
+        // const panel3...panel4...panel5
+        panel2.addEventListener('click', ()=>{
+            panel2.classList.add('active');
+            panel1.classList.remove('active')
+            // panel3.classList.remove
+        })
+      </script> -->
+
+
+       <script>
+        const panels = document.querySelectorAll('.panel');
+
+        panels.forEach(panel=>{
+            panel.addEventListener('click', ()=>{
+                panels.forEach(p=> p.classList.remove('active'))
+                panel.classList.toggle('active')
+            })
+        })
+
+       </script>
+      
+</body>
+</html>
