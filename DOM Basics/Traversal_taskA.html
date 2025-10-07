@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #nav{
+            background-color: lightcyan;
+            padding: 10px;
+
+        }
+
+        .active{
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <ul id="nav">
+        <li class="active">Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+    <button id="nextBtn">Next</button>
+    <button id="remove">Remove</button>
+    <input type="text" id="taskInput" placeholder="Enter new Item"/>
+    <button id="add" 3>Add Item</button>
+    <script>
+        const addBtn = document.getElementById('add');
+        const itemInput = document.querySelector('#taskInput');
+
+        const list = document.querySelector('#nav');
+
+
+        addBtn.addEventListener('click', ()=>{
+            //1 extract the user input from the input
+            const userInput = itemInput.value;
+            if(userInput===""){
+                alert('Please Enter a valid input');
+                return
+            }
+            const li = document.createElement('li');
+            li.textContent=userInput;
+
+            itemInput.value = ""
+            itemInput.focus();
+
+            list.appendChild(li);
+        })
+    </script>
+    <script>
+        //1. select the button
+        const nextBtn = document.querySelector('#nextBtn');
+
+        nextBtn.addEventListener('click', ()=>{
+            const current = document.querySelector('#nav .active');
+            const next = current.nextElementSibling;
+
+            if(next){
+                current.classList.remove('active');
+                next.classList.add('active')
+            }else{
+                current.classList.remove('active')
+                document.querySelector('#nav li:first-child').classList.add('active')
+            }
+        })
+
+        const removeBtn = document.getElementById('remove');
+
+        removeBtn.addEventListener('click', ()=>{
+            const lastItem = list.lastElementChild;
+
+            if(lastItem){
+                // list.removeChild(lastItem);
+                lastItem.remove()
+            }
+        })
+
+    </script>
+</body>
+</html>

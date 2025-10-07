@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list{
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <ul class="list">
+        <li class="list-item">Child A</li>
+        <li class="list-item">Child B</li>
+        <li class="list-item">Child C</li>
+    </ul>
+
+    <div class="box">
+        <div class="anotherbox">
+            <p id="para">Para</p>
+            <button id="submit">Submit</button>
+        </div>
+    </div>
+    <script>
+        // query selector for list item li 
+        const listitem = document.querySelector('.list-item');
+        console.log(listitem)
+
+        //list item's parent 
+        // parentNode returns the parent node
+        const parent = listitem.parentNode;
+        //parentElement return parentElement
+        const parentElement = listitem.parentElement;
+        console.log(parentElement)
+
+
+
+        //para selector
+        const para = document.querySelector("#para");
+        //para parent
+        const para_parent = para.parentNode;
+        //para parent's parent or grandparent
+        const box = para_parent.parentNode;
+
+        console.log(box)
+        //firstElementChild return the html tag of the first element child (not considering attributes and other nodes)
+        const box_children = box.firstElementChild
+        //this returns declaration wise last child tag of the element
+        const last_child=box_children.lastElementChild
+        console.log(box_children)
+
+        const para_child = box_children.children;
+
+        console.log(para_child)
+        console.log(last_child)
+    </script>
+</body>
+</html>

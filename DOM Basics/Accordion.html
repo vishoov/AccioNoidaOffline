@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>
+            Products
+            <ul class="submenu" style="display: none;">
+                <li>Laptop</li>
+                <li>Phone</li>
+            </ul>
+        </li>
+        <li>Support</li>
+        <li>Contact us</li>
+    </ul>
+    <script>
+        const parentItem= document.querySelector('#menu > li');
+        parentItem.addEventListener('click', ()=>{
+            const submenu = document.querySelector('.submenu');
+            submenu.style.display= submenu.style.display ==="none"?"block":"none";
+        })
+    </script>
+</body>
+</html>

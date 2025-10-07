@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li id="A">Child A</li>
+        <li id="B" >Child B</li>
+        <li id="C">Child C</li>
+    </ul>
+
+<nav>
+    <a href="google.com">Google</a>
+    <a href="facebook.com">Facebook</a>
+
+</nav>
+
+    <script>
+        const middle = document.querySelector('#B');
+        const A = middle.previousElementSibling;
+        console.log(A)
+        const C = middle.nextElementSibling
+        console.log(C)
+    </script>
+</body>
+</html>
