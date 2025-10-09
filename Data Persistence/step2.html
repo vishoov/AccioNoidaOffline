@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>FORM step 2</h2>
+    <input type="email" id="email" placeholder="Please Enter your email">
+    <br>
+    <button onclick="second()">Next</button>
+    <button onClick="prev()">Prev</button>
+
+    <script>
+
+        document.getElementById('email').value= localStorage.getItem('email')
+
+        function second(){
+            const email = document.querySelector('#email').value;
+
+            localStorage.setItem('email', email);
+            window.location.href="step3.html"
+        }
+
+        function prev(){
+            window.location.href='index.html'
+        }
+    </script>
+</body>
+</html>

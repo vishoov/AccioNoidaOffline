@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FORM Step 3</h1>
+
+    <input type="text" id="num" placeholder="Please enter your number">
+    <br>
+    <button onclick="step3()">Next</button>
+    <script>
+document.getElementById('num').value=localStorage.getItem('num');
+
+function step3(){
+
+    const number = document.querySelector('#num').value;
+
+    localStorage.setItem('num', number);
+
+    window.location.href="step4.html"
+}
+    </script>
+</body>
+</html>
