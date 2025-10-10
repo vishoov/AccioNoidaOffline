@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tree Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            text-align: center;
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        
+        main {
+            margin: 20px 0;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 10px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        footer {
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="main-title">Understanding the DOM</h1>
+            <h2>Document Object Model Tutorial</h2>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#structure">Structure</a></li>
+                <li><a href="#examples">Examples</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <section id="intro">
+                <h3>What is the DOM?</h3>
+                <p class="highlight">
+                    The DOM is a programming interface that represents HTML 
+                    documents as a <strong>tree structure</strong> of nodes.
+                </p>
+                <p>
+                    Each HTML element becomes a node in this tree, allowing 
+                    JavaScript to interact with and manipulate webpage content.
+                </p>
+            </section>
+            
+            <section id="structure">
+                <h3>DOM Structure</h3>
+                <p>Every element, attribute, and piece of text is a node.</p>
+                <img src="dom-placeholder.jpg" alt="DOM Tree Visualization">
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 DOM Tutorial. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
