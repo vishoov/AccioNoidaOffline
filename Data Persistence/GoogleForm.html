@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container{
+            background-color: lightcyan;
+            width: 100%;
+            padding: 10px;
+            min-height: 200px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Google Forms</h1>
+
+    <div class="container">
+<!-- 
+            <label for="response" id="response">Response: </label>
+            <input type="text" placeholder="Please enter your response" > -->
+
+    </div>
+
+    <div class="controls">
+        <button >Add Question</button>
+        <button>Add Uploader</button>
+        <button>Show responses</button>
+    </div>
+
+    <script>
+        let questionCount = 0;
+
+        //Elements selection
+        const container = document.querySelector('.container');
+        const buttons = document.querySelectorAll('.controls button');
+
+        buttons[0].addEventListener('click', addQuestion)
+        buttons[1].addEventListener('click', addUploader);
+        buttons[2].onclick = showResponses;
+
+        function addQuestion(){
+            //1. cacheing 
+            //question-> div
+            const question = document.createElement('div');
+            //label
+            const label = document.createElement('label');
+            label.textContent = `Question Number ${questionCount+1}:`;
+            //input tag
+            const input = document.createElement('input');
+            input.type='text';
+            input.placeholder='Enter your response';
+            input.onblur=saveData;
+            //auto save 
+            //button
+            const removeBtn = document.createElement('button');
+            removeBtn.textContent = 'Remove';
+            
+            removeBtn.onclick = function(){
+                container.removeChild(question);
+            }
+            //div -> label -> input -> btn
+            question.appendChild(label);
+            question.appendChild(input);
+            question.appendChild(removeBtn);
+            questionCount++;
+            //container -> question 
+            container.appendChild(question);
+
+
+        }
+
+        function addUploader(){
+            //1. create a question div
+            const question = document.createElement('div');
+//2 create label
+            const label = document.createElement('label');
+            label.textContent=`Upload ${questionCount+1}: `;
+
+            //3. create input
+            const input = document.createElement('input');
+            input.type='file';
+
+            //4. remove button
+            const removeBtn = document.createElement('button');
+            removeBtn.textContent='Remove';
+
+            removeBtn.onclick= function(){
+                container.removeChild(question);
+            }
+
+            //finalise the element
+            question.appendChild(label)
+            question.appendChild(input)
+            question.appendChild(removeBtn);
+
+            questionCount++;
+
+            container.appendChild(question);
+
+        }
+
+        function saveData(){
+            const formData = []
+
+            container.querySelectorAll('div').forEach(div=>{
+                const label = div.querySelector('label');
+                const input = div.querySelector('input');
+
+                if(label && input){
+                    formData.push({
+                        question:label.textContent,
+                        answer:input.value,
+                        type:input.type
+                    })
+                }
+            })
+            localStorage.setItem('formResponse', JSON.stringify(formData))
+        }
+
+        function showResponses(){
+            alert(localStorage.getItem('formResponse'))
+        }
+
+    </script>
+</body>
+</html>
