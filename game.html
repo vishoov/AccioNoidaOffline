@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Car Game</title>
+        <style>
+            *{
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+
+            .line{
+                position: absolute;
+                height: 100px;
+                width: 10px;
+                background-color:white;
+                margin-left:190px;
+            }
+
+            .score{
+                background-color: red;
+                height: 9vh;
+                text-align: center;
+                color: white;
+                font-size: 1.7rem;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .game{
+                width:100vw;
+                height:91vh;
+                position: relative;
+                display: flex;
+                justify-content: center;
+            }
+            .startScreen{
+                position: absolute;
+                background-color: brown;
+
+                width: 400px;
+                z-index: 1;
+                text-align: center;
+                border: 1px solid black;
+                padding: 15px;
+                margin:auto;
+                
+            }
+
+            .gameArea{
+                background-color: black;
+                width: 400px;
+                height:100%;
+                overflow: hidden;
+                position: relative;
+                margin: auto;
+            }
+
+            .car{
+                position: absolute;
+                bottom: 100px;
+                margin: auto;
+                z-index: 5;
+                width: 50px;
+                height: 100px;
+                background-color: white;
+                background-image: url(./car2.png);
+                background-size: cover;
+            }
+
+            .hide{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="score"></div>
+        <div class="game">
+            <div class="startScreen">
+                Press here to start the game <br>
+                Use Arrow keys to move the car <br>
+                If you hit another car, you lose 
+            </div>
+            <div class="gameArea">
+
+            </div>
+        </div>
+
+        <script>
+            const startScreen = document.querySelector('.startScreen');
+            const gameArea = document.querySelector('.gameArea');
+            startScreen.addEventListener('click', start)
+
+            //playerStats
+            let player = {
+                score:0
+            }
+
+            function playGame(){
+                // setInterval(()=>moveLines(), 50)
+                moveLines()
+                window.requestAnimationFrame(playGame)
+            }
+
+            function moveLines(){
+                let lines = document.querySelectorAll('.line');
+                lines.forEach((line)=>{
+                    if(line.y>=1500){
+                        line.y-=1500;
+                    }
+// element.y is vertical position value
+                    line.y+=5;
+                    line.style.top = line.y +"px";
+                })
+
+
+            }
+
+            function start(){
+                startScreen.classList.add('hide')
+
+                gameArea.innerHTML = "";
+                
+                player.score =0;
+
+                for(let x=0; x<10; x++){
+                    let div = document.createElement('div');
+                    div.classList.add('line');
+                    div.y=x*150;
+                    // div.style.top = (x*150)+"px";
+                    gameArea.appendChild(div)
+                }
+                window.requestAnimationFrame(playGame)
+
+                let car = document.createElement("div");
+                car.setAttribute("class", "car");
+                gameArea.appendChild(car)
+               
+            }
+
+
+            
+           
+        </script>
+    </body>
+</html>
+
+
+<!-- window.requestAnimationFrame(callback function) = this function tells the browser to execute the callback function BEFORE THE NEXT SCREEN REPAINT which creates a smooth animation loop-->
+ <!-- This method is specially designed to work in sync with browser's refresh rate  -->
+
+ <!-- playGame -> Repaint  -->
+
+ <!-- this function is better than setInterval and setTimeout because its browser-optimised for smoother animations and automatically pauses when the tab is inactive which saves CPU resouces and battery life-->
