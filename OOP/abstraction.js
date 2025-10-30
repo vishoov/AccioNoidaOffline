@@ -7,6 +7,16 @@
 class Netflix{
     #devices
 
+private
+    _validateDeviceLimit(){
+    if(this.#devices.length>=4){
+        return false
+    }else{
+        return true
+    }
+}
+
+
     constructor(){
         this.#devices=[]
     }
@@ -22,14 +32,7 @@ class Netflix{
         this.#devices.push(deviceName)
         console.log("Logged in successfully")
     }
-
-    _validateDeviceLimit(){
-        if(this.#devices.length>=4){
-            return false
-        }else{
-            return true
-        }
-    }
+    
 }
 
 const TV = new Netflix()

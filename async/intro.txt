@@ -1,0 +1,66 @@
+Synchronous javascript
+
+- synchronous programming is a programming model where tasks are carried out one after another in a defined or sequential way
+- in sync code, each operation must finish before the next operation
+- straightforward, easy to bug, flows directly in the order that the code is written in 
+
+
+Blocking Behaviour
+
+- any operation that takes extra time than a normal line of code (like reading a file, fetching from a server, calling a database, or calling any other software service). other tasks will not be able to proceed until this task finishes
+
+Need for Asynchronous programming
+
+- as our applications become interactive and reliant on i/o operations (like database queries, API requests or files access) the limitations of synchronous blocking code become bigger
+
+- blocking the main thread can lead to : 
+
+    - unresponsive programms=  poor user experience 
+
+    - inefficient use of system resources such as CPU time is wasted waiting for i/o operations 
+
+    - scalability issues in multi user applications 
+
+- Asynchronous pragramming solves this problem by allowing the program to process the other tasks while waiting for slow or blocking operations to complete
+
+- non blocking operations help in making highly responsive interfaces and scalable servers 
+
+- code can handle multiple tasks 
+
+
+Asynchronoous code need examples
+
+- server needs to fetch data from the database
+- multiple API call responses
+- spotify playing a song in blobs
+
+
+conclusion 
+
+- single threaded javascript 
+- blocking behaviour 
+- avoid this blocking behaviour we use async programming
+- any code that can block further execution
+can be kept aside in event loop and whenever its execution is finished
+it can be implemented
+
+
+Asynchronous Methods 
+
+Callback functions 
+
+a callback is function that is passed as an argument to another function (async), and is invoked when an asynchronous operation completes 
+
+setTimeout -> it is a function that takes a callback and executes it after a given delay (in milliseconds)
+
+setTimeout(function, delay(in ms), param1, param2, .....)
+
+- this returns a timeout ID -> clearTimeout.
+
+
+
+
+
+//clearTimeout -> cancel a scheduled callback to prevent execution
+
+setInterval -> it repeatedly executes the function with given tim eintervals 
