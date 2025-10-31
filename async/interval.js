@@ -12,3 +12,4 @@ let intervalId= setInterval(()=>{
         clearInterval(intervalId)
     }
 }, 1000)
+
