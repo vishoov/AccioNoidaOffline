@@ -52,7 +52,7 @@
 // Fulfilled -> function has completed successfully, it has returned what we wanted 
 // Rejected -> function has failed, it has returned us an error
 
-// when a promisiton transitions from pending to fulfilled or rejected, its state and value becomes immutable
+// when a promise transitions from pending to fulfilled or rejected, its state and value becomes immutable
 
 // whenever the function is fulfilled -> we can handle the response in the .then()
 // whenever there is an error out of the promise -> we catch that error in .catch()
@@ -134,17 +134,17 @@ makeShake("Mango")
 .then((fruit)=>{
     console.log("Buy ", fruit.fruit, " from market first")
     return {
-        next:"milk"
+        material:"milk"
     }
 })
 .then((next)=>{
-    console.log("Buy ", next.next, " now")
+    console.log("Buy ", next.material, " now")
     return {
-        next:"Suger"
+        material:"Suger"
     }
 })
 .then((next)=>{
-    console.log("Get ", next.next)
+    console.log("Get ", next.material)
     return "Milkshake Ready"
 })
 .then((message)=>{
@@ -156,55 +156,55 @@ makeShake("Mango")
 })
 
 
-//this is a classic exmaple of sequential exeution of code which causes CALLBACK HELL
+// //this is a classic exmaple of sequential exeution of code which causes CALLBACK HELL
 
-function getData(callback) {
-    setTimeout(() => callback(null, "data1"), 100);
-  }
+// function getData(callback) {
+//     setTimeout(() => callback(null, "data1"), 100);
+//   }
   
-  function processData(data, callback) {
-    setTimeout(() => callback(null, data + "_processed"), 100);
-  }
+//   function processData(data, callback) {
+//     setTimeout(() => callback(null, data + "_processed"), 100);
+//   }
   
-  function saveData(data, callback) {
-    setTimeout(() => callback(null, data + "_saved"), 100);
-  }
+//   function saveData(data, callback) {
+//     setTimeout(() => callback(null, data + "_saved"), 100);
+//   }
 
-  getData((err1, data1) => {
-    if (err1) return console.error(err1);
+//   getData((err1, data1) => {
+//     if (err1) return console.error(err1);
     
-    processData(data1, (err2, data2) => {
-      if (err2) return console.error(err2);
+//     processData(data1, (err2, data2) => {
+//       if (err2) return console.error(err2);
       
-      saveData(data2, (err3, data3) => {
-        if (err3) return console.error(err3);
-        console.log("Final result:", data3);
-      });
-    });
-  });
+//       saveData(data2, (err3, data3) => {
+//         if (err3) return console.error(err3);
+//         console.log("Final result:", data3);
+//       });
+//     });
+//   });
 
 
-//   Solution
-function getData() {
-    return new Promise(resolve => {
-      setTimeout(() => resolve("data1"), 100);
-    });
-  }
+// //   Solution
+// function getData() {
+//     return new Promise(resolve => {
+//       setTimeout(() => resolve("data1"), 100);
+//     });
+//   }
   
-  function processData(data) {
-    return new Promise(resolve => {
-      setTimeout(() => resolve(data + "_processed"), 100);
-    });
-  }
+//   function processData(data) {
+//     return new Promise(resolve => {
+//       setTimeout(() => resolve(data + "_processed"), 100);
+//     });
+//   }
   
-  function saveData(data) {
-    return new Promise(resolve => {
-      setTimeout(() => resolve(data + "_saved"), 100);
-    });
-  }
+//   function saveData(data) {
+//     return new Promise(resolve => {
+//       setTimeout(() => resolve(data + "_saved"), 100);
+//     });
+//   }
 
-  getData()
-  .then(data=>processData(data))
-  .then(processedData=>saveData(processedData))
-  .then(finalResult=>console.log("Final Result: ", finalResult))
-  .catch(err=>console.error("Error: ", err))
+//   getData()
+//   .then(data=>processData(data))
+//   .then(processedData=>saveData(processedData))
+//   .then(finalResult=>console.log("Final Result: ", finalResult))
+//   .catch(err=>console.error("Error: ", err))
