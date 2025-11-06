@@ -122,38 +122,38 @@ function fetchsomething(value){
 // .catch(err=>console.log(err))
 
 
-function makeShake(fruit){
-    return new Promise(resolve=>{
-        resolve({
-            fruit:fruit
-        })
-    })
-}
+// function makeShake(fruit){
+//     return new Promise(resolve=>{
+//         resolve({
+//             fruit:fruit
+//         })
+//     })
+// }
 
-makeShake("Mango")
-.then((fruit)=>{
-    console.log("Buy ", fruit.fruit, " from market first")
-    return {
-        material:"milk"
-    }
-})
-.then((next)=>{
-    console.log("Buy ", next.material, " now")
-    return {
-        material:"Suger"
-    }
-})
-.then((next)=>{
-    console.log("Get ", next.material)
-    return "Milkshake Ready"
-})
-.then((message)=>{
-    console.log(message)
-})
-.catch((err)=>console.error(err))
-.finally(()=>{
-    console.log("A1 wow amazing")
-})
+// makeShake("Mango")
+// .then((fruit)=>{
+//     console.log("Buy ", fruit.fruit, " from market first")
+//     return {
+//         material:"milk"
+//     }
+// })
+// .then((next)=>{
+//     console.log("Buy ", next.material, " now")
+//     return {
+//         material:"Suger"
+//     }
+// })
+// .then((next)=>{
+//     console.log("Get ", next.material)
+//     return "Milkshake Ready"
+// })
+// .then((message)=>{
+//     console.log(message)
+// })
+// .catch((err)=>console.error(err))
+// .finally(()=>{
+//     console.log("A1 wow amazing")
+// })
 
 
 // //this is a classic exmaple of sequential exeution of code which causes CALLBACK HELL
@@ -208,3 +208,33 @@ makeShake("Mango")
 //   .then(processedData=>saveData(processedData))
 //   .then(finalResult=>console.log("Final Result: ", finalResult))
 //   .catch(err=>console.error("Error: ", err))
+
+
+const AjayPromise = new Promise(
+    (resolve, reject)=>{
+        setTimeout(()=>{
+            const success = true;
+
+            if(success){
+                resolve("Operation successful")
+            }else{
+                reject(new Error("Operation Failed"))
+            }
+
+        }, 2000)
+    }
+)
+
+
+AjayPromise
+.then(result=>{
+    console.log("Success", result);
+    return result;
+})
+.catch(err=>console.error(err))
+.finally(()=>console.log("Promise is terminated"))
+
+
+const resolvedPromise = Promise.resolve("Hello World")
+
+resolvedPromise.then(value=>console.log(value))
