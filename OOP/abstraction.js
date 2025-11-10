@@ -7,8 +7,7 @@
 class Netflix{
     #devices
 
-private
-    _validateDeviceLimit(){
+    #validateDeviceLimit(){
     if(this.#devices.length>=4){
         return false
     }else{
